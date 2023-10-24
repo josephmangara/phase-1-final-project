@@ -1,16 +1,6 @@
 //The js code fetches data from a json server and displays it and creates an interactive user inferface. 
 
-document.addEventListener("DOMContentLoaded", function (){
-    getCharacters()
-});
-
-function getCharacters(){
-    fetch(" http://localhost:3000/results")
-    .then(res => res.json())
-    .then(data => {
-        displayCharacters(data)
-    });
-};
+docu
 //This function creates a list of the chosen characters. 
 function displayCharacters(data){
     for (let details of data){
