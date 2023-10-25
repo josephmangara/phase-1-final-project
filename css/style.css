@@ -1,29 +1,45 @@
-body {background-color: rgb(248, 229, 175);}
- h1 {text-align: center;
+.color {
+    background: linear-gradient(to-bottom, #15eee3, #f3f8f7)
+}
+
+h1 {text-align: center;
      font-family: sans-serif;
      font-size: 0.9cm;
      font-weight:bolder;
      font-style: oblique;
 }
 
+#characters {
+    text-decoration: none;
+}
 #wrapper {
     margin-left: 20px;
     margin-right: 20px;
-    background-color: blue;
+    background-color: rgb(243, 243, 250);
+    
 }
 
 .box {
-    width: 200px;
-    height: 600px;
+    width: 600px;
+    height: 700px;
     display: inline-block;
+    text-decoration: none;
 }
 
 #splitleft {
-    width: 25%;
+    width: 35%;
+    height: auto;
     background-color: rgb(226, 248, 192);
 }
 
 #splitright {
-    background-color: rgb(236, 54, 21);
-    height: 200px;
+    background-image: linear-gradient(blue, green);
+    width: 63%;
+    height: auto;
+}
+
+.text-center {
+    text-align: center;
+    background-color: rgb(23, 201, 224);
+    margin-bottom: 5px;
 }

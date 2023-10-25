@@ -8,18 +8,16 @@ document.addEventListener("DOMContentLoaded", function (){
     .then(res => res.json())
     .then(data => {displayCharacters(data)
   })
-  .catch(error => {console.error("Error:", error);
- })
  };
 
 //This function creates a list of the chosen characters. 
 function displayCharacters(data){
-    for (details of data){
+    for (let details of data){
     console.log(details);
     let list = document.getElementById("characters");
     let li = document.createElement("li");
     li.textContent = details.name;
-    li.addEventListener("click", () => seeCharacters(details));
+    li.addEventListener("click", (event) => seeCharacters(details));
     list.appendChild(li);
    
 }
@@ -27,9 +25,9 @@ function displayCharacters(data){
 
 //Displaying the characters on the webpage.
 function seeCharacters(details){
-    let chdata = document.querySelector("#chdata");
+    let chdata = document.getElementById("chdata");
     chdata.innerHTML =`
-    <ol id="them">
+    <h2>Insight</h2>
       <img src="${details.image}">
       <p>Name: ${details.name}</p>
       <p>Status: ${details.status}</p>
@@ -37,7 +35,7 @@ function seeCharacters(details){
       <p>Gender: ${details.gender}</p>
       <p>Location: ${details.location.name}</p>
       <p>Origin: ${details.origin.name}</p>
-    </ol>
+    
     `
 }
 
