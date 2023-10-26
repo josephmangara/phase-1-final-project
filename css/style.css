@@ -28,7 +28,8 @@ h1 {text-align: center;
     width: 600px;
     height: 700px;
     display: inline-block;
-    text-decoration: none;
+    list-style: none;
+    font-size: xx-large;
 }
 
 .text-center {
@@ -40,14 +41,14 @@ h1 {text-align: center;
 #logo {
     height: 20px;
     width: 20px;
-
+    padding-right: 50px;
 }
 #log {
     height: 20px;
     width: 20px;
 }
 #socials {
-    display: inline-block;
+    
 }
 #characters {
     text-decoration: none;

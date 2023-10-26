@@ -8,16 +8,14 @@ document.addEventListener("DOMContentLoaded", function (){
     .then(res => res.json())
     .then(data => {displayCharacters(data)
 
-    if (data.length > 0) {
-      displayFilmDetails(data[0]);
-}
  })};
 
 //This function creates a list of the chosen characters. 
 function displayCharacters(data){
-    for (let details of data){
+  let list = document.getElementById("characters");  
+
+  for (let details of data){
     console.log(details);
-    let list = document.getElementById("characters");
     let li = document.createElement("li");
     li.textContent = details.name;
     li.addEventListener("click", (event) => seeCharacters(details));
@@ -54,6 +52,20 @@ const commentElement = document.createElement("p");
   commentElement.textContent = commentText;
   commentContainer.appendChild(commentElement);
 
+  //delete button 
+document.addEventListener("click", function (){
+  deleteComment()
+})
+const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.addEventListener("click", () => {
+    deleteComment(commentElement);
+    });
+    commentContainer.appendChild(deleteButton); 
+
+function deleteComment(commentElement){
+    commentElement.remove();
+}
 // Storing the comments in localStorage
     const comments = JSON.parse(localStorage.getItem("comments")) || [];
     comments.push(commentText);
@@ -61,23 +73,7 @@ const commentElement = document.createElement("p");
     commentInput.value = "";
     }
 }
-//delete button 
-document.activeElement("click", function (){
-  deleteButton()
-})
-const deleteButton = document.createElement("button");
-    deleteButton.textContent = "Delete";
-    deleteButton.addEventListener("click", () => {
-    deleteComment(commentElement, commentText);
-    });
-    commentContainer.appendChild(deleteButton); 
 
-function deleteComment(commentElement, commentText){
-    commentElement.remove();
-    // const comments = JSON.parse(localStorage.getItem("comments")) || [];
-    // const updatedComments = comments.filter((comment) => comment !== commentText);
-    // localStorage.setItem("comments", JSON.stringify(updatedComments));
-}
 // Loading  and displaying existing comments from localStorage when the page loads
 window.addEventListener("load", function () {
   const comments = JSON.parse(localStorage.getItem("comments")) || [];
@@ -89,3 +85,4 @@ window.addEventListener("load", function () {
       commentContainer.appendChild(commentElement);
   });
 });
+
