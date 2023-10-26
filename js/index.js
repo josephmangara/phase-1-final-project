@@ -43,8 +43,49 @@ function seeCharacters(details){
 }
 
 document.addEventListener("click", function (){
-  commentButton()
+  addComment() 
 })
-function commentButton(button){
-  const button = document.getElementById("commentbtn")
+function addComment(){
+  const commentInput = document.getElementById("commentSection");
+  const commentText = commentInput.value.trim();
+
+if (commentText !== ""){
+const commentElement = document.createElement("p");
+  commentElement.textContent = commentText;
+  commentContainer.appendChild(commentElement);
+
+// Storing the comments in localStorage
+    const comments = JSON.parse(localStorage.getItem("comments")) || [];
+    comments.push(commentText);
+    localStorage.setItem("comments", JSON.stringify(comments));
+    commentInput.value = "";
+    }
 }
+//delete button 
+document.activeElement("click", function (){
+  deleteButton()
+})
+const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.addEventListener("click", () => {
+    deleteComment(commentElement, commentText);
+    });
+    commentContainer.appendChild(deleteButton); 
+
+function deleteComment(commentElement, commentText){
+    commentElement.remove();
+    // const comments = JSON.parse(localStorage.getItem("comments")) || [];
+    // const updatedComments = comments.filter((comment) => comment !== commentText);
+    // localStorage.setItem("comments", JSON.stringify(updatedComments));
+}
+// Loading  and displaying existing comments from localStorage when the page loads
+window.addEventListener("load", function () {
+  const comments = JSON.parse(localStorage.getItem("comments")) || [];
+  const commentContainer = document.getElementById("commentContainer");
+
+  comments.forEach(function (commentText) {
+      const commentElement = document.createElement("p");
+      commentElement.textContent = commentText;
+      commentContainer.appendChild(commentElement);
+  });
+});
