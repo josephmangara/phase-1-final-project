@@ -7,8 +7,11 @@ document.addEventListener("DOMContentLoaded", function (){
     fetch("http://localhost:3000/results")
     .then(res => res.json())
     .then(data => {displayCharacters(data)
-  })
- };
+
+    if (data.length > 0) {
+      displayFilmDetails(data[0]);
+}
+ })};
 
 //This function creates a list of the chosen characters. 
 function displayCharacters(data){
@@ -39,3 +42,9 @@ function seeCharacters(details){
     `
 }
 
+document.addEventListener("click", function (){
+  commentButton()
+})
+function commentButton(button){
+  const button = document.getElementById("commentbtn")
+}

@@ -9,15 +9,27 @@
 <body>
   <div class="color">
     <h1>Rick and Morty Characters</h1>
+    
     <p>Rick and Morty is an animated sci-fi show created by Justin Roiland and Dan Harmon.</p>
-    <div id="wrapper">
-      <div id="splitleft" class="box">
-        <h2 id="characters">Characters</h2>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-5">
+              <div id="wrapper">
+                  <div id="splitleft" class="box">
+                      <h2 id="characters">Characters</h2>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-7">
+              <div id="wrapper">
+                  <div id="splitright" class="box">
+                      <h2 id="chdata"></h2>
+                  </div>
+              </div>
+          </div>
       </div>
-      <div id="splitright" class="box">
-        <h2 id="chdata"></h2>
-      </div>
-    </div>
+  </div>
+    <br>
     <p>Find more information about the show from
       <a href="https://en.wikipedia.org/wiki/Rick_and_Morty">show insight</a>
     </p>
@@ -26,8 +38,21 @@
     </p>
     
   </div>   
+  <div id="event">
+    <p>What are your thoughts on the characters?</p>
+    <input id="commentSection">
+    <button id="commentbtn">comment</button>
+  </div>
+  <br>
   <footer class="text-center">
-    <div class="container">
+    <div class="container2">
+      <div id="socials">
+        <p>Interesting pictures at</p>
+        <a href="https://unsplash.com/@mangara74_">unsplash</a>
+        <img id="logo" src="https://i.pinimg.com/564x/81/7b/3a/817b3a9b71cdb47c19f415f1a43db6f3.jpg">
+        <a href="https://www.pinterest.com/search/pins/?rs=ac&len=2&q=rick%20and%20morty&eq=rick%20and&etslf=7043">pinterest</a>
+        <img id ="log" src="https://i.pinimg.com/236x/6e/ad/91/6ead912ceb43c93b8e189d1eb802845f.jpg">
+      </div>
       <p>&copy; 2023 Joseph Mangara.All rights reserved.</p>
       <p>Rick and Morty fan</p>
     </div>
