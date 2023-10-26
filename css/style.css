@@ -34,8 +34,8 @@ h1 {text-align: center;
 
 .text-center {
     text-align: center;
-    background-color: rgb(23, 201, 224);
-    margin-bottom: 5px;
+    background-color: rgb(194, 225, 252);
+    max-width: 100%;
 }
 
 #logo {
@@ -47,12 +47,13 @@ h1 {text-align: center;
     height: 20px;
     width: 20px;
 }
-#socials {
-    
-}
+
 #characters {
     text-decoration: none;
 }
 #commentbtn {
     background-color: aquamarine;
+}
+#userinfo {
+    font-style: italic;
 }

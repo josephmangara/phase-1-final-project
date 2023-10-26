@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function (){
   getCharacters()
 });
  function getCharacters(){
-    fetch("https://rickandmortyapi.com/api/character//1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20")
+    fetch("https://rickandmortyapi.com/api/character//1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18")
     .then(res => res.json())
     .then(data => {displayCharacters(data)
     //   if (data.length > 0) {
