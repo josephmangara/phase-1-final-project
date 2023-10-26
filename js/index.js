@@ -7,7 +7,10 @@ document.addEventListener("DOMContentLoaded", function (){
     fetch("http://localhost:3000/results")
     .then(res => res.json())
     .then(data => {displayCharacters(data)
-
+      if (data.length > 0) {
+        let rand = Math.floor(Math.random() * data.length)
+        displayCharacters(data[rand]);
+    }
  })};
 
 //This function creates a list of the chosen characters. 
