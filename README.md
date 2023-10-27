@@ -18,5 +18,8 @@ When a character's name is clicked, the seeCharacters function is called, displa
 Adding Comments:
 Users can leave comments in the comment section. 
 
+Deleting Comments:
+users can delete their comment using the delete button. 
+
 Local Storage for Comments:
 User comments are stored in the browser's local storage to persist across page loads. I use an event listener that ensures that when the page loads, previous comments appear. 
