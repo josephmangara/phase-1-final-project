@@ -90,3 +90,11 @@ window.addEventListener("load", function () {
   });
 });
 
+const likeButton = document.querySelector(".material-symbols-outlined");
+const likeCount = document.querySelector(".likeCount");
+let count = 0;
+
+likeButton.addEventListener("click", () => {
+  count++;
+  likeCount.innerText = count;
+});

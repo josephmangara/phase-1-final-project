@@ -3,7 +3,6 @@
 body {
      /*background-image: linear-gradient(rgb(149, 149, 245), rgb(11, 144, 161));*/
      background-color: rgb(194, 225, 252);
-     margin-left: 20px;
 }
 
 h1 {text-align: center;
@@ -17,9 +16,8 @@ h1 {text-align: center;
     text-decoration: none;
 }
 .container {
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: rgb(194, 225, 252);
+    max-width: 80%;
+    background-color: rgb(194, 229, 252);
     font-family: fantasy;
     
 }
@@ -32,10 +30,12 @@ h1 {text-align: center;
     font-size: xx-large;
 }
 
-.text-center {
+footer.text-center {
     text-align: center;
     background-color: rgb(194, 225, 252);
     max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 0px;
 }
 
 #logo {
@@ -56,4 +56,29 @@ h1 {text-align: center;
 }
 #userinfo {
     font-style: italic;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.fav {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.fav-selected > .material-symbols-outlined{
+    color: black;
+}
+/* .fav-selected > .likeCount  */
+.liked.material-symbols-outlined {
+    color:rgb(247, 11, 11);
+}
+#intro {
+    margin-left: 20px;
 }

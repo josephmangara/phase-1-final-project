@@ -8,13 +8,28 @@
     <title>Main Rick and Morty characters</title>
 </head>
 <body>
-  <header>
+  <div class="color">
     <h1>Rick and Morty Characters</h1>
-  </header>
-    <p id="intro">Rick and Morty is an animated sci-fi show created by Justin Roiland and Dan Harmon. The show started in 2013 and has 7 seasons.</p>
+    
+    <p>Rick and Morty is an animated sci-fi show created by Justin Roiland and Dan Harmon. The show started in 2013 and has 7 seasons.</p>
     <div class="container">
-      <h2 id="characters">Characters</h2>
-      <h2 id="chdata"></h2>
+      <div class="row">
+          <div class="col-md-5">
+              <div id="wrapper">
+                  <div id="splitleft" class="box">
+                      <h2 id="characters">Characters</h2>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-7">
+              <div id="wrapper2">
+                  <div id="splitright" class="box">
+                      <h2 id="chdata"></h2>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
     <br>
     <p>Find more information about the show from
       <a href="https://en.wikipedia.org/wiki/Rick_and_Morty">show insight</a>
@@ -22,18 +37,18 @@
     <p>Watch the latest episode on
       <a href="https://rb.gy/hjosj">Hulu</a>
     </p>
-     
+    
+  </div>   
   <div id="commentContainer">
     <p>What are your thoughts on the characters?</p>
-    <input id="commentSection" type="text" placeholder="add a comment">
+    <input id="commentSection" type="text">
     <button id="commentbtn" type="button">comment</button>
     <br>
-    <div class="fav fav-selected">like if you love the show.   
+    <div class="fav fav-selected">
       <span class="material-symbols-outlined">favorite</span>
       <span class="likeCount">0</span>
     </div>
   </div>
-</div>  
   <hr>
   <footer class="text-center">
     <div class="container2">
@@ -50,6 +65,6 @@
       <p>Rick and Morty</p>
     </div>
   </footer>
-<script src="new.js"></script>
+<script src="./js/index.js"></script>
 </body>
 </html>
